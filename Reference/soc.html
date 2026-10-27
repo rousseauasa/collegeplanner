@@ -1,0 +1,1062 @@
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="UNIVERSITY OF VERMONT - Schedule of Courses">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Courses</title>
+    <link rel="stylesheet" href="/js/lfjs.css">
+    <link rel="stylesheet" href="/fonts/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="fose.css?%foseversion%">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <script>
+        function isIOS() {
+            return ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+        }
+
+        if (isIOS()) {
+            const viewportmeta = document.querySelector('meta[name=viewport]');
+            viewportmeta.setAttribute('content', "initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0");
+        }
+    </script>
+    <script>
+        var foseConfig = {
+            use_section_full_icons: false,
+            countWaitlistAsUnavailable: false,
+            apiURL: "api/?page=fose",
+            context: "fose",
+            canCreateCart: true,
+            become_disable_registration: false,
+            text_become_registration_not_allowed: "Registration on behalf of the student is not allowed",
+            textAPIError: "Sorry, we were unable to process your request",
+            textLoading: "Loading...",
+            textSearching: "Searching...",
+            textNotOffered: "This course is not currently being offered",
+            textTooBroad: "Search too broad, please use the search fields to narrow your results",
+            textCriteriaInvalid: "Search criteria has errors, please fix all errors to continue",
+            textValueVaries: "Varies by section",
+            textAmbiguousCartTerm: "To view your primary cart, please select a specific term first",
+            textInvalidCartName: "Cart name is invalid.  It must not be empty and cannot contain pipe characters.",
+            textCartIsReadOnly: "The specified cart is read-only and cannot be modified",
+            textSectionInCart: "This section is in your cart",
+            textConfirmClearCart: "Are you sure you want to clear the contents of this cart?",
+            textUpdateCartFailed: "Your cart could not be updated, please try again.  Error:",
+            textRegisteredSection: "You are registered for this section",
+            textCourseTaken: "You have taken this course",
+            textCourseTakenEquiv: "You have taken a course that is equivalent to this",
+            textSectionCanceled: "Canceled section",
+            textSectionFull: "This section is full",
+            textSectionFullWaitlistOpen: "This section is full, waitlist is open",
+            textNoResultsFound: "No Results Found",
+            textCartContents: "Cart Contents",
+            textSearchResults: "Search Results",
+            textError: "Error",
+            textCart: "Cart",
+            textPlan: "Plan",
+            textPlanSnapshot: "Snapshot",
+            textPlanNoTermAssigned: null,
+            textPlanCourseNotOffered: "Course Not Offered",
+            textPlanOptionCleanedup: "Squash Old Terms",
+            textCouldNotProcessRequest: "Sorry, something went wrong and we were unable to process your request.  Please try again.",
+            textResetSearch: "Reset Search",
+            textClearCart: "Clear Cart",
+            textDeleteCart: "Delete Cart",
+            textSearchCriteria: "Search Criteria",
+            textShortTerm: "Term",
+            textSectionNumber: "Section Number",
+            textMeets: "Meets",
+            textInstructor: "Instructor",
+            textAddToCart: "ADD TO CART",
+            textRemoveFromCart: "REMOVE FROM CART",
+            textTermCalendar: "Term Calendar",
+            textSelectedSection: "Selected Section",
+            textShowAll: "SHOW ALL",
+            textCourse: "Course",
+            textCalendar: "Calendar",
+            textInstructorStaff: "Staff",
+            textInstructorTeam: "Team",
+            textSectionOnWaitlist: "You are on the waitlist for this section",
+            textSectionOnWaitlistPosition: "You are on the waitlist for this section in position:",
+            textTerm: "Term",
+            textManageCourse: "MANAGE COURSE",
+            textProgramsCatalogLink: "the Catalog",
+            textAdvisingPIN: "Advising PIN",
+            textCartAddSuccess: "Added {{ section.code }}",
+            textCartRemoveSuccess: "Removed {{ section.code }}",
+            textCartAddError: "Error - Could not add {{ section.code }}",
+            textCartRemoveError: "Error - Could not remove {{ section.code }}",
+            textArrangerNoSectionCombinations: "No possible section combinations were found",
+            textArrangerNoAddedSections: "No added sections",
+            textArrangerType: "type:",
+            textArrangerSectionNumber: "Section Number",
+            textArrangerMeets: "Meets",
+            textArrangerInstructor: "Instructor",
+            textArrangerRespectExcludeTimes: "Respect Excluded Times",
+            textArrangerExcludeNoOpenSeats: "Exclude Courses With No Open Seats",
+            textArrangerEditExcludeTimes: "edit...",
+            textArrangerOtherCartOptions: "Other Cart Options",
+            textArrangerAddingSections: "Adding these sections",
+            textArrangerArrange: "Arrange",
+            textArrangerPossibleSchedules: "Possible Schedules",
+            textArrangerScheduleMyPlan: "Schedule My Plan",
+            textArrangerNoTerm: "No Term",
+            textArrangerHideSchedules: "Hide schedules",
+            textArrangerShowSchedules: "Show schedules",
+            textArrangerMultitermError: "Unable to arrange multiterm",
+            textArrangerCalendarView: "Calendar View",
+            textArrangerPrimaryCartCourses: "Primary Cart Courses",
+            textArrangerPickPlanCourses: "Pick Plan Courses To Add To The Cart",
+            textArrangerGenerateSchedules: "Generate Schedules",
+            textArrangerSelectCourseToMerge: "Select to pick this course to merge into the cart",
+            textArrangerSectionWillBeAdded: "This section will be added to your cart",
+            textArrangerSectionWillBeRemoved: "This section will be removed from your cart",
+            textArrangerCartApplyCancel: "Cancel",
+            textArrangerCartApplyOk: "OK",
+            textArrangerAcceptNewCart: "Accept New Cart",
+            textArrangerChangesStagedForCart: "These are the changes you have staged for your cart.",
+            textPlanArrangerChangesStagedForCart: "These are the changes you have staged for your cart. Please be aware that any classes already in your primary cart will automatically be included in this new cart. If you wish to change a class already in your primary cart, please remove it first and then select \"Generate Schedules\" again.",
+            textArrangerCourseTaken: "You have taken this course",
+            textArrangerCart: "Cart",
+            textArrangerSectionInCart: "This section is in your cart",
+            textArrangerRegisteredSection: "You are registered for this section",
+            textArrangerWaitlistSection: "You are on the waitlist for this section",
+            textArrangerPlanCourseNotOffered: "Course Not Offered",
+            textArrangerDetails: "Details",
+            textArrangerTotalCourses: "Total Courses",
+            textArrangerCourses: "Courses",
+            textArrangerSchedulesProcessed: "Schedules Processed",
+            textArrangerSchedulesReturned: "Schedules Returned",
+            textArrangerTotalCombinations: "Total Combinations",
+            notifyOnCartOperations: false,
+            calendarGroups: "LEC,SEM,LAB",
+            calendarColors: ["#c6dbef,#08519c", "#c7e9c0,#006d2c", "#fee6ce,#d94801", "#d9d9d9,#252525"],
+            calendarAssocSections: false,
+            calendarAssocSectionsIcon: true,
+            calendarAssocSectionsCrn: true,
+            calendarAssocSectionsMp: true,
+            calendarAssocSectionsInstr: true,
+            calendarAssocUpdateOnClick: false,
+            calendarTbaSections: true,
+            calendarTbaSectionsIcon: true,
+            calendarTbaSectionsTerm: false,
+            calendarTbaSectionsSectionNo: true,
+            calendarTbaSectionsSchd: true,
+            calendarTbaSectionsInstr: true,
+            calendarTbaUpdateOnClick: false,
+            itemName: "course",
+            itemsName: "courses",
+            courseRegex: "[A-Z]{2,4} \\d{1,3}",
+            searchRegexes: [{ "regex": "[A-Z]{2,4} \\d{1,3}", "appearsIn": "keyword", "mapsTo": "alias", "regexFlags": "" }, { "regex": "^\\d{5}$", "appearsIn": "keyword", "mapsTo": "crn", "regexFlags": "" }],
+            haveCART: null,
+            promotedScreens: {},
+            collapse: { "groupByPrimary": "code,title", "groupBySecondary": "srcdb", "keyField": "crn", "countFields": "schd", "rollupFields": "notes", "rollupSomeFields": "hasCartNote,hasRegisteredNote,hasWaitlistNote", "rollupEveryFields": "hasWarnNote,isCancelled" },
+            sis: "banner",
+            fuseURL: "api/?page=sisproxy",
+            userRecordURL: null,
+            codeMapping: { "schd:T": { "singular": "thesis/independent study", "plural": "thesis/independent study" }, "schd:L": { "singular": "lecture", "plural": "lecture" }, "schd:B": { "singular": "lab", "plural": "lab" }, "schd:S": { "singular": "seminar", "plural": "seminar" }, "schd:P": { "singular": "performance", "plural": "performance" }, "schd:I": { "singular": "internship/practicum/field w", "plural": "internship/practicum/field w" }, "schd:X": { "singular": "online", "plural": "online" }, "schd:A": { "singular": "activity", "plural": "activity" }, "schd:V": { "singular": "hybrid", "plural": "hybrid" }, "schd:H": { "singular": "honors", "plural": "honors" }, "schd:Y": { "singular": "lecture/discussion", "plural": "lecture/discussion" }, "schd:Z": { "singular": "lecture/lab", "plural": "lecture/lab" }, "schd:1": { "singular": "lecture", "plural": "lecture" }, "schd:2": { "singular": "lecture", "plural": "lecture" }, "schd:D": { "singular": "discussion", "plural": "discussion" }, "schd:3": { "singular": "lecture", "plural": "lecture" }, "schd:E": { "singular": "studio", "plural": "studio" }, "schd:M": { "singular": "activity", "plural": "activity" }, "schd:8": { "singular": "miscellaneous", "plural": "miscellaneous" }, "schd:O": { "singular": "studio", "plural": "studio" }, "schd:5": { "singular": "lecture", "plural": "lecture" }, "schd:6": { "singular": "lecture", "plural": "lecture" }, "schd:4": { "singular": "lecture", "plural": "lecture" }, "schd:C": { "singular": "clinic", "plural": "clinic" }, "schd:J": { "singular": "studio", "plural": "studio" }, "schd:7": { "singular": "lecture", "plural": "lecture" }, "schd:9": { "singular": "miscellaneous", "plural": "miscellaneous" }, "schd:W": { "singular": "performance", "plural": "performance" }, "schd:F": { "singular": "studio", "plural": "studio" }, "schd:K": { "singular": "activity", "plural": "activity" }, "schd:R": { "singular": "recitation", "plural": "recitation" }, "schd:G": { "singular": "studio", "plural": "studio" }, "schd:N": { "singular": "activity", "plural": "activity" }, "schd:Q": { "singular": "activity", "plural": "activity" }, "schd:U": { "singular": "miscellaneous", "plural": "miscellaneous" } },
+            srcDBs: [{ "code": "202701", "name": "Spring 2027", "short": "Spring", "contains": "", "status": "clss-publish", "flags": "hiderooms" }, { "code": "202609", "name": "Fall 2026", "short": "Fall", "contains": "", "status": "clss-publish", "flags": "" }],
+            haveSAM: null,
+            authWindowFeatures: "height=600,width=800,left=100,top=100",
+            authURL: null,
+            logoutURL: null,
+            textTermCalendarDisclaimer: "*Class breaks (including holidays) are not displayed. Consult the academic calendar for class breaks and individual class syllabi for exceptions to the published class meeting dates/times.",
+            displayTermCal: false
+        };
+    </script>
+</head>
+
+<body class="user-anon screens--samenabled--off screens--isprod--on" data-swipe-key="af76ef0cd71705b49cf8214eb3688c34">
+    <div id="modal" class="modal">
+        <div id="modal__content" class="modal__content"></div>
+    </div>
+    <header class="banner" role="banner">
+        <h1 class="banner__title">UNIVERSITY OF VERMONT - Schedule of Courses</h1>
+        <div class="banner__icons">
+        </div>
+    </header>
+
+    <main class="panels" style="transition-duration: 300ms; transform: translateX(0px);">
+        <div class="panel panel--visible panel--kind-root" data-panel-id="0">
+            <div class="panel__content" tabindex="0">
+                <div class="panel__head">
+                    <h2>Search Courses</h2>
+                </div>
+                <div class="panel__body" data-search-data-provider="search-panel">
+                    <form id="search-form">
+                        <div id="search-button-sticky-container" style="width: 537px; display: none;"><button
+                                class="btn btn--full" id="search-button-sticky" data-action="search"
+                                type="submit">SEARCH</button></div>
+                        <div id="crit-section-1464624409188" class="section">
+                            <div id="crit-content-1464624409188" class="section__content">
+                                <div class="form-group">
+                                    <label for="crit-srcdb" class="sr-only">Term</label>
+                                    <select id="crit-srcdb" class="form-control" data-type="single-column" required="">
+                                        <option value="202701">Spring 2027</option>
+                                        <option value="202609">Fall 2026</option>
+                                    </select>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="crit-subject" class="sr-only">Subject</label>
+                                    <div class="seligo-container" data-mode="inline">
+                                        <div class="seligo-cover" aria-label="Any Subject, Subject" tabindex="0"
+                                            role="button" style="height: 34px; left: 0px; top: 0px; width: 517px;">
+                                        </div><select id="crit-subject"
+                                            class="form-control seligo-desktop seligo-original"
+                                            data-type="single-column" data-seligo-label="Subject" tabindex="-1">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <option value="">Any Subject</option>
+                                            <option value="ABIO">ABIO - Animal Biosciences</option>
+                                            <option value="ALE">ALE - Agr, Lndscp &amp; Envir</option>
+                                            <option value="ANFS">ANFS - Animal, Nutrition &amp; Food Sci</option>
+                                            <option value="ANNB">ANNB - Anatomy &amp; Neurobiology</option>
+                                            <option value="ANPS">ANPS - Anatomy/Physiology</option>
+                                            <option value="ANTH">ANTH - Anthropology</option>
+                                            <option value="ARTH">ARTH - Art History</option>
+                                            <option value="ARTS">ARTS - Art Studio</option>
+                                            <option value="ASCI">ASCI - Animal Sciences</option>
+                                            <option value="ASL">ASL - American Sign Language</option>
+                                            <option value="ASTR">ASTR - Astronomy</option>
+                                            <option value="AT">AT - Athletic Training</option>
+                                            <option value="BCOR">BCOR - BioCore</option>
+                                            <option value="BHSC">BHSC - Biomedical and Health Sciences</option>
+                                            <option value="BIOC">BIOC - Biochemistry</option>
+                                            <option value="BIOE">BIOE - Bioengineering</option>
+                                            <option value="BIOL">BIOL - Biology</option>
+                                            <option value="BME">BME - Biomedical Engineering</option>
+                                            <option value="BUS">BUS - Business Administration</option>
+                                            <option value="CALS">CALS - Agriculture &amp; Life Science</option>
+                                            <option value="CAS">CAS - Arts and Sciences</option>
+                                            <option value="CDAE">CDAE - Community Development &amp; Applied Economics
+                                            </option>
+                                            <option value="CEE">CEE - Civil &amp; Environmental Engr</option>
+                                            <option value="CEMS">CEMS - Engr &amp; Math Sciences</option>
+                                            <option value="CHEM">CHEM - Chemistry</option>
+                                            <option value="CHIN">CHIN - Chinese</option>
+                                            <option value="CIS">CIS - Computer Information Systems</option>
+                                            <option value="CLAS">CLAS - Classics</option>
+                                            <option value="CLBI">CLBI - Cell Biology</option>
+                                            <option value="CMPE">CMPE - Computer Engineering</option>
+                                            <option value="CNCR">CNCR - Cancer Studies</option>
+                                            <option value="CNSL">CNSL - Counseling</option>
+                                            <option value="COMU">COMU - College of Medicine Undergraduate</option>
+                                            <option value="CRES">CRES - Critical Race &amp; Ethnic Stdies</option>
+                                            <option value="CS">CS - Computer Science</option>
+                                            <option value="CSCS">CSCS - Comp Studies - Culture/Society</option>
+                                            <option value="CSD">CSD - Comm Sciences &amp; Disorders</option>
+                                            <option value="CSYS">CSYS - Complex Systems</option>
+                                            <option value="CTS">CTS - Clinical&amp;Translational Science</option>
+                                            <option value="DNCE">DNCE - Dance</option>
+                                            <option value="DPT">DPT - Doctor of Physical Therapy</option>
+                                            <option value="ECLD">ECLD - Educ Cultural &amp; Ling Diversity</option>
+                                            <option value="ECON">ECON - Economics</option>
+                                            <option value="ECSP">ECSP - Early Childhood Special Educ</option>
+                                            <option value="EDCI">EDCI - Curriculum &amp; Instruction</option>
+                                            <option value="EDCO">EDCO - Counseling</option>
+                                            <option value="EDEC">EDEC - Early Childhood Pre K-3</option>
+                                            <option value="EDEL">EDEL - Elementary Education</option>
+                                            <option value="EDES">EDES - Envrnmntl &amp; Sustainability Edu</option>
+                                            <option value="EDFS">EDFS - Foundations</option>
+                                            <option value="EDHE">EDHE - Health Education</option>
+                                            <option value="EDHI">EDHI - Higher Education</option>
+                                            <option value="EDLI">EDLI - Library Science</option>
+                                            <option value="EDLP">EDLP - Leadership and Policy Studies</option>
+                                            <option value="EDLT">EDLT - Literacy</option>
+                                            <option value="EDML">EDML - Middle Level Teacher Education</option>
+                                            <option value="EDPE">EDPE - Physical Education-Prof</option>
+                                            <option value="EDRM">EDRM - Education Research Methods</option>
+                                            <option value="EDSC">EDSC - Secondary Education</option>
+                                            <option value="EDSP">EDSP - Special Education</option>
+                                            <option value="EDSS">EDSS - Education</option>
+                                            <option value="EDTE">EDTE - Teacher Education</option>
+                                            <option value="EE">EE - Electrical Engineering</option>
+                                            <option value="EMED">EMED - EMED</option>
+                                            <option value="EMGT">EMGT - Engineering Management</option>
+                                            <option value="ENGL">ENGL - English</option>
+                                            <option value="ENGR">ENGR - Engineering</option>
+                                            <option value="ENSC">ENSC - Environmental Sciences</option>
+                                            <option value="ENVS">ENVS - Environmental Studies</option>
+                                            <option value="ESOL">ESOL - Engl for Spkrs of Other Langs</option>
+                                            <option value="EXSC">EXSC - Exercise Science</option>
+                                            <option value="FOR">FOR - Forestry</option>
+                                            <option value="FREN">FREN - French</option>
+                                            <option value="FS">FS - Food Systems</option>
+                                            <option value="FTS">FTS - Film &amp; Television Studies</option>
+                                            <option value="GEOG">GEOG - Geography</option>
+                                            <option value="GEOL">GEOL - Geology</option>
+                                            <option value="GERM">GERM - German</option>
+                                            <option value="GNRL">GNRL - GNRL</option>
+                                            <option value="GRAD">GRAD - Graduate</option>
+                                            <option value="GRK">GRK - Greek</option>
+                                            <option value="GRMD">GRMD - Graduate Medical</option>
+                                            <option value="GRNS">GRNS - Graduate Nursing</option>
+                                            <option value="GRS">GRS - Global and Regional Studies</option>
+                                            <option value="GSWS">GSWS - Gndr, Sexuality, &amp; Wms Stdies</option>
+                                            <option value="GU">GU - General University</option>
+                                            <option value="HCOL">HCOL - Honors College</option>
+                                            <option value="HDF">HDF - Human Development &amp; Fam Sci</option>
+                                            <option value="HDFS">HDFS - Human Development &amp; Fam Stdies</option>
+                                            <option value="HEBR">HEBR - Hebrew</option>
+                                            <option value="HFRS">HFRS - Human Functioning and Rehabilitation Science
+                                            </option>
+                                            <option value="HLTH">HLTH - Health</option>
+                                            <option value="HP">HP - Historic Preservation</option>
+                                            <option value="HS">HS - Holocaust Studies</option>
+                                            <option value="HSCI">HSCI - Health Sciences</option>
+                                            <option value="HSOC">HSOC - Health and Society</option>
+                                            <option value="HST">HST - History</option>
+                                            <option value="HUMN">HUMN - Humanities</option>
+                                            <option value="IHS">IHS - Interprofessional Health Sci</option>
+                                            <option value="ITAL">ITAL - Italian</option>
+                                            <option value="JAPN">JAPN - Japanese</option>
+                                            <option value="JS">JS - Jewish Studies</option>
+                                            <option value="LAT">LAT - Latin</option>
+                                            <option value="LC">LC - Learning Community</option>
+                                            <option value="LING">LING - Linguistics</option>
+                                            <option value="MATH">MATH - Mathematics</option>
+                                            <option value="MATS">MATS - Materials Science</option>
+                                            <option value="MBA">MBA - Master of Business Admin</option>
+                                            <option value="ME">ME - Mechanical Engineering</option>
+                                            <option value="MED">MED - Medicine</option>
+                                            <option value="MLS">MLS - Medical Laboratory Science</option>
+                                            <option value="MMG">MMG - Microbiology &amp; Molecular Genetics</option>
+                                            <option value="MPBP">MPBP - Molecular Physiology &amp; Biophysics</option>
+                                            <option value="MS">MS - Military Studies</option>
+                                            <option value="MU">MU - Music</option>
+                                            <option value="MUE">MUE - Music Ensemble</option>
+                                            <option value="MUL">MUL - Music Lessons</option>
+                                            <option value="NFS">NFS - Nutrition and Food Sciences</option>
+                                            <option value="NH">NH - Nursing &amp; Health Sciences</option>
+                                            <option value="NR">NR - Natural Resources</option>
+                                            <option value="NSCI">NSCI - Neuroscience</option>
+                                            <option value="NURS">NURS - Nursing</option>
+                                            <option value="OBGY">OBGY - Obstetrics &amp; Gynecology</option>
+                                            <option value="ORNT">ORNT - Orientation</option>
+                                            <option value="ORTH">ORTH - Orthopedic Surgery</option>
+                                            <option value="OSSP">OSSP - Overseas Study Program</option>
+                                            <option value="OT">OT - Occupational Therapy</option>
+                                            <option value="PA">PA - Public Administration</option>
+                                            <option value="PATH">PATH - Pathology</option>
+                                            <option value="PBIO">PBIO - Plant Biology</option>
+                                            <option value="PEAC">PEAC - Physical Education Activities</option>
+                                            <option value="PH">PH - Public Health</option>
+                                            <option value="PHIL">PHIL - Philosophy</option>
+                                            <option value="PHRM">PHRM - Pharmacology</option>
+                                            <option value="PHYS">PHYS - Physics</option>
+                                            <option value="POLS">POLS - Political Science</option>
+                                            <option value="PRNU">PRNU - Professional Nursing</option>
+                                            <option value="PRT">PRT - Parks, Recreation and Tourism</option>
+                                            <option value="PSS">PSS - Plant &amp; Soil Science</option>
+                                            <option value="PSYS">PSYS - Psychological Science</option>
+                                            <option value="RAD">RAD - Radiology</option>
+                                            <option value="RADT">RADT - Radiation Therapy</option>
+                                            <option value="REL">REL - Religion</option>
+                                            <option value="RMS">RMS - Rehabilitation &amp; Movement Sci</option>
+                                            <option value="RUSS">RUSS - Russian</option>
+                                            <option value="SEP">SEP - Sustainability, Ecology and Policy</option>
+                                            <option value="SINT">SINT - Internship</option>
+                                            <option value="SOA">SOA - School of the Arts</option>
+                                            <option value="SOC">SOC - Sociology</option>
+                                            <option value="SPAN">SPAN - Spanish</option>
+                                            <option value="SPCH">SPCH - Speech</option>
+                                            <option value="STAT">STAT - Statistics</option>
+                                            <option value="SURG">SURG - Surgery</option>
+                                            <option value="SWSS">SWSS - Social Work</option>
+                                            <option value="THE">THE - Theatre</option>
+                                            <option value="VS">VS - Vermont Studies</option>
+                                            <option value="WFB">WFB - Wildlife &amp; Fisheries Biology</option>
+                                            <option value="WLIT">WLIT - World Literature</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="crit-coll" class="sr-only">College</label>
+                                    <select id="crit-coll" class="form-control" data-type="single-column">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <option value="">Any College</option>
+                                        <option value="00">00</option>
+                                        <option value="05">College of Agric &amp; Life Sci</option>
+                                        <option value="15">College of Arts &amp; Sciences</option>
+                                        <option value="30">College of Education &amp; Soc Svc</option>
+                                        <option value="25">College of Engr &amp; Math Sci</option>
+                                        <option value="37">College of Nursing &amp; Health Sc</option>
+                                        <option value="01">Cross-College</option>
+                                        <option value="02">General Instruction</option>
+                                        <option value="50">Graduate College</option>
+                                        <option value="20">Grossman School of Business</option>
+                                        <option value="03">Honors College</option>
+                                        <option value="60">Robert Larner Coll of Medicine</option>
+                                        <option value="10">Rubenstein Sch of Env &amp; NR</option>
+                                    </select>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="crit-keyword" class="sr-only">Keyword</label><input type="text"
+                                        id="crit-keyword" class="form-control" placeholder="Keyword">
+                                </div>
+                                <div class="form-group">
+                                    <label for="crit-instructor" class="sr-only">Instructor</label><input type="text"
+                                        id="crit-instructor" class="form-control" placeholder="Instructor">
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn--full" id="search-button" data-action="search"
+                                        type="submit">SEARCH</button>
+
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn--full" id="reset-button" data-action="panel-home"
+                                        type="button">Reset</button>
+
+                                </div>
+                                <div class="form-group">
+                                    <div class="meet-pat-rec"><input type="checkbox" id="crit-custom-meeting-pattern"
+                                            value="" data-action="allowdefault;custom-meet"> <label
+                                            for="crit-custom-meeting-pattern"><span class="label-text">Exclude
+                                                Times</span><button class="edit-meet-pat-button btn btn--primary"
+                                                data-action="custom-meet" type="button"
+                                                aria-label="Edit custom meeting pattern">edit</button></label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="crit-section-1464797400962" class="section">
+                            <h3 class="section__title">ADVANCED SEARCH</h3>
+                            <div id="crit-content-1464797400962" class="section__content">
+                                <div class="form-group">
+                                    <label for="crit-session" class="sr-only">Part of Term</label>
+                                    <select id="crit-session" class="form-control" data-type="single-column">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <option value="">Any Part of Term</option>
+                                        <option value="ZJ">10 Weeks Sumr 5/18 - 7/24</option>
+                                        <option value="ZK">1st 2 Weeks Sumr 6/15 - 6/26</option>
+                                        <option value="ZF">1st 4 Weeks Sumr 5/18 - 6/12</option>
+                                        <option value="ZC">1st 6 Weeks Sumr 5/18 - 6/26</option>
+                                        <option value="ZA">1st 8 Weeks Sumr 5/18 - 7/10</option>
+                                        <option value="ZL">2nd 2 Weeks Sumr 6/29 - 7/10</option>
+                                        <option value="ZG">2nd 4 Weeks Sumr 6/15 - 7/10</option>
+                                        <option value="ZD">2nd 6 Weeks Sumr 6/29 - 8/7</option>
+                                        <option value="ZB">2nd 8 Weeks Sumr 6/15 - 8/7</option>
+                                        <option value="ZM">3rd 2 Weeks Sumr 7/20 - 7/31</option>
+                                        <option value="ZH">3rd 4 Weeks Sumr 7/13 - 8/7</option>
+                                        <option value="ZE">3rd 6 Weeks Sumr N/A 2026</option>
+                                        <option value="ZI">4th 4 Weeks Sumr 6/29 - 7/24</option>
+                                        <option value="ZN">9 Weeks Sumr 6/8 - 8/7</option>
+                                        <option value="A">First Half Term POT</option>
+                                        <option value="1">Full Term</option>
+                                        <option value="ZZ">Miscellaneous Sumr 5/18 - 8/7</option>
+                                        <option value="B">Second Half Term POT</option>
+                                        <option value="W">Winter Session</option>
+                                    </select>
+
+                                </div>
+                                <div class="form-group">
+                                    <div><input type="checkbox" id="crit-winter_session" value="Y"> <label
+                                            for="crit-winter_session">Winter Session</label></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="crit-hours" class="sr-only">Credit Hours</label>
+                                    <select id="crit-hours" class="form-control" data-type="single-column">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <option value="">Any Credit Hours</option>
+                                        <option value="0">0 Credit Hours</option>
+                                        <option value="0.5">0.5 Credit Hours</option>
+                                        <option value="1">1 Credit Hour</option>
+                                        <option value="2">2 Credit Hours</option>
+                                        <option value="3">3 Credit Hours</option>
+                                        <option value="4">4 Credit Hours</option>
+                                        <option value="5">5 Credit Hours</option>
+                                        <option value="6">6 Credit Hours</option>
+                                        <option value="8">8 Credit Hours</option>
+                                        <option value="9">9 Credit Hours</option>
+                                        <option value="10">10 Credit Hours</option>
+                                        <option value="12">12 Credit Hours</option>
+                                        <option value="15">15 Credit Hours</option>
+                                        <option value="18">18 Credit Hours</option>
+                                    </select>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="crit-instmode" class="sr-only">Instruction Method</label>
+                                    <select id="crit-instmode" class="form-control" data-type="single-column">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <option value="">Any Instruction Method</option>
+                                        <option value="HYFLX">Hyflex (Flex Stud Attend)</option>
+                                        <option value="ACT">Activity</option>
+                                        <option value="CLN">Clinical</option>
+                                        <option value="DIS">Discussion</option>
+                                        <option value="FWRK">Field Work</option>
+                                        <option value="HYBD">Hybrid (Online and In Class)</option>
+                                        <option value="IS">Independent Study</option>
+                                        <option value="INTN">Internship</option>
+                                        <option value="LAB">Lab</option>
+                                        <option value="LEC">Lecture</option>
+                                        <option value="LCDS">Lecture and Discussion</option>
+                                        <option value="LCLB">Lecture and Lab</option>
+                                        <option value="LSN">Lesson</option>
+                                        <option value="ONLA">Online Asynchronous</option>
+                                        <option value="ONL">Online Exclusively</option>
+                                        <option value="ONLS">Online Synchronous</option>
+                                        <option value="PERF">Performance</option>
+                                        <option value="PRAC">Practicum</option>
+                                        <option value="REC">Recitation</option>
+                                        <option value="RSCH">Research</option>
+                                        <option value="SEM">Seminar</option>
+                                        <option value="STD">Studio</option>
+                                        <option value="TA">Teaching Assistantship</option>
+                                        <option value="TD">Thesis/Dissertation</option>
+                                    </select>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="crit-service_learning_attr" class="sr-only">Service Learning</label>
+                                    <select id="crit-service_learning_attr" class="form-control"
+                                        data-type="multiple-column">
+
+
+
+                                        <option value="">Any Service Learning</option>
+                                        <option value="service_learning_attr_CL">Community Learning</option>
+                                        <option value="service_learning_attr_SL">Service Learning</option>
+                                    </select>
+
+                                </div>
+                                <div class="form-group">
+                                    <div><input type="checkbox" id="crit-fys_attr" value="Y"> <label
+                                            for="crit-fys_attr">FYS</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="crit-section-1679310648321" class="section">
+                            <h3 class="section__title">Catamount Core Curriculum Requirements</h3>
+                            <div id="crit-content-1679310648321" class="section__content">
+                                <div class="form-group">
+                                    <div class="grid4 note">Students following catalogue editions before Fall 2023
+                                        (started at UVM in Fall 2022, for example) need to use the General Education
+                                        Categories search at the bottom.</div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="grid4 note">Liberal Arts</div>
+                                </div>
+                                <div class="form-group">
+                                    <div><input type="checkbox" id="crit-attr_ah1" value="Y"> <label
+                                            for="crit-attr_ah1">Arts (AH1)</label></div>
+                                    <div><input type="checkbox" id="crit-attr_ah2" value="Y"> <label
+                                            for="crit-attr_ah2">Literature (AH2)</label></div>
+                                    <div><input type="checkbox" id="crit-attr_ah3" value="Y"> <label
+                                            for="crit-attr_ah3">Humanities (AH3)</label></div>
+                                    <div><input type="checkbox" id="crit-attr_ma" value="Y"> <label
+                                            for="crit-attr_ma">Pure Mathematics (MA)</label></div>
+                                    <div><input type="checkbox" id="crit-attr_n1" value="Y"> <label
+                                            for="crit-attr_n1">Natural Science - no lab (N1)</label></div>
+                                    <div><input type="checkbox" id="crit-attr_n2" value="Y"> <label
+                                            for="crit-attr_n2">Natural Science - with lab (N2)</label></div>
+                                    <div><input type="checkbox" id="crit-attr_s1" value="Y"> <label
+                                            for="crit-attr_s1">Social Sciences (S1)</label></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="grid4 note">Core Skills</div>
+                                </div>
+                                <div class="form-group">
+                                    <div><input type="checkbox" id="crit-attr_oc" value="Y"> <label
+                                            for="crit-attr_oc">Oral Communication (OC)</label></div>
+                                    <div><input type="checkbox" id="crit-attr_qd" value="Y"> <label
+                                            for="crit-attr_qd">Quantitative and Data Literacy (QD)</label></div>
+                                    <div><input type="checkbox" id="crit-attr_wil1" value="Y"> <label
+                                            for="crit-attr_wil1">Writing and Info Literacy (WIL1)</label></div>
+                                    <div><input type="checkbox" id="crit-attr_wil2" value="Y"> <label
+                                            for="crit-attr_wil2">Writing and Info Literacy Tier 2 (WIL2)</label></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="grid4 note">Common Ground Values</div>
+                                </div>
+                                <div class="form-group">
+                                    <div><input type="checkbox" id="crit-attr_d1" value="Y"> <label
+                                            for="crit-attr_d1">Race and Racism in the US (D1)</label></div>
+                                    <div><input type="checkbox" id="crit-attr_d2" value="Y"> <label
+                                            for="crit-attr_d2">Diversity of Human Experience (D2)</label></div>
+                                    <div><input type="checkbox" id="crit-attr_gc1" value="Y"> <label
+                                            for="crit-attr_gc1">Global Citizenship: Global Systems &amp; Problems
+                                            (GC1)</label></div>
+                                    <div><input type="checkbox" id="crit-attr_gc2" value="Y"> <label
+                                            for="crit-attr_gc2">Global Citizenship: Developing Global Citizens
+                                            (GC2)</label></div>
+                                    <div><input type="checkbox" id="crit-attr_su" value="Y"> <label
+                                            for="crit-attr_su">Sustainability (SU)</label></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="grid4 header">General Education Categories: Catalogue Editions Before
+                                        Fall 2023</div>
+                                </div>
+                                <div class="form-group">
+                                    <div><input type="checkbox" id="crit-attr_d1two" value="Y"> <label
+                                            for="crit-attr_d1two">Race and Racism in the US (D1)</label></div>
+                                    <div><input type="checkbox" id="crit-attr_d2two" value="Y"> <label
+                                            for="crit-attr_d2two">Diversity of Human Experience (D2)</label></div>
+                                    <div><input type="checkbox" id="crit-attr_fw" value="Y"> <label
+                                            for="crit-attr_fw">Foundational Writing and Informational Literacy
+                                            (FW)</label></div>
+                                    <div><input type="checkbox" id="crit-attr_qr" value="Y"> <label
+                                            for="crit-attr_qr">Quantitative Reasoning (QR)</label></div>
+                                    <div><input type="checkbox" id="crit-attr_sutwo" value="Y"> <label
+                                            for="crit-attr_sutwo">Sustainability (SU)</label></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <a href="#" id="deep-link-tag" data-group="" data-key="" data-srcdb="" data-action="result-detail"
+                        style="display: none;"></a>
+                </div>
+            </div>
+        </div>
+        <div class="empty-space" style="transition-duration: 300ms; transform: translateX(0px);">
+            <div class="empty-space__content">
+                <div class="glass">
+                    <div class="glass__content">
+                        <h2>Welcome to the University of Vermont Course Search</h2>
+                        <p>Use the search panel on the left to find and narrow down classes of interest.</p>
+                        <p>For textbook information, please visit the&nbsp;<a
+                                href="https://uvmbookstore.uvm.edu/buy_textbooks.asp"><strong>UVM
+                                    Bookstore</strong></a>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="empty-space__version">
+                186.54.57
+            </div>
+        </div>
+    </main>
+    <div id="notifications" aria-atomic="false" role="status" aria-live="polite"></div>
+
+
+
+    <script src="fose.js?1793023661153"></script>
+    <script src="/js/lfjs.js"></script>
+
+
+    <div class="seligo-drop" role="application" data-mode="inline" data-current="CS"
+        style="left: 10px; top: 149.938px; min-width: 329px; display: none;">
+        <div class="seligo-remove"></div>
+        <div class="seligo-current">CS - Computer Science</div><label for="seligo-search-1"
+            class="sr-only">Search</label>
+        <div class="seligo-search-container"><input role="combobox" aria-controls="listbox-seligo-search-1" type="text"
+                id="seligo-search-1" class="seligo-search" placeholder=""></div>
+        <div id="listbox-seligo-search-1" role="listbox" class="seligo-options" style="max-height: 300px;">
+            <div data-value="" role="option" class="selected">Any Subject</div>
+            <div data-value="ABIO" role="option" class="">ABIO - Animal Biosciences</div>
+            <div data-value="ALE" role="option">ALE - Agr, Lndscp &amp; Envir</div>
+            <div data-value="ANFS" role="option">ANFS - Animal, Nutrition &amp; Food Sci</div>
+            <div data-value="ANNB" role="option">ANNB - Anatomy &amp; Neurobiology</div>
+            <div data-value="ANPS" role="option">ANPS - Anatomy/Physiology</div>
+            <div data-value="ANTH" role="option">ANTH - Anthropology</div>
+            <div data-value="ARTH" role="option">ARTH - Art History</div>
+            <div data-value="ARTS" role="option">ARTS - Art Studio</div>
+            <div data-value="ASCI" role="option">ASCI - Animal Sciences</div>
+            <div data-value="ASL" role="option">ASL - American Sign Language</div>
+            <div data-value="ASTR" role="option">ASTR - Astronomy</div>
+            <div data-value="AT" role="option">AT - Athletic Training</div>
+            <div data-value="BCOR" role="option">BCOR - BioCore</div>
+            <div data-value="BHSC" role="option">BHSC - Biomedical and Health Sciences</div>
+            <div data-value="BIOC" role="option">BIOC - Biochemistry</div>
+            <div data-value="BIOE" role="option">BIOE - Bioengineering</div>
+            <div data-value="BIOL" role="option">BIOL - Biology</div>
+            <div data-value="BME" role="option">BME - Biomedical Engineering</div>
+            <div data-value="BUS" role="option">BUS - Business Administration</div>
+            <div data-value="CALS" role="option">CALS - Agriculture &amp; Life Science</div>
+            <div data-value="CAS" role="option">CAS - Arts and Sciences</div>
+            <div data-value="CDAE" role="option">CDAE - Community Development &amp; Applied Economics</div>
+            <div data-value="CEE" role="option">CEE - Civil &amp; Environmental Engr</div>
+            <div data-value="CEMS" role="option">CEMS - Engr &amp; Math Sciences</div>
+            <div data-value="CHEM" role="option">CHEM - Chemistry</div>
+            <div data-value="CHIN" role="option">CHIN - Chinese</div>
+            <div data-value="CIS" role="option">CIS - Computer Information Systems</div>
+            <div data-value="CLAS" role="option">CLAS - Classics</div>
+            <div data-value="CLBI" role="option">CLBI - Cell Biology</div>
+            <div data-value="CMPE" role="option">CMPE - Computer Engineering</div>
+            <div data-value="CNCR" role="option">CNCR - Cancer Studies</div>
+            <div data-value="CNSL" role="option">CNSL - Counseling</div>
+            <div data-value="COMU" role="option">COMU - College of Medicine Undergraduate</div>
+            <div data-value="CRES" role="option">CRES - Critical Race &amp; Ethnic Stdies</div>
+            <div data-value="CS" role="option" class="">CS - Computer Science</div>
+            <div data-value="CSCS" role="option">CSCS - Comp Studies - Culture/Society</div>
+            <div data-value="CSD" role="option">CSD - Comm Sciences &amp; Disorders</div>
+            <div data-value="CSYS" role="option">CSYS - Complex Systems</div>
+            <div data-value="CTS" role="option">CTS - Clinical&amp;Translational Science</div>
+            <div data-value="DNCE" role="option">DNCE - Dance</div>
+            <div data-value="DPT" role="option">DPT - Doctor of Physical Therapy</div>
+            <div data-value="ECLD" role="option">ECLD - Educ Cultural &amp; Ling Diversity</div>
+            <div data-value="ECON" role="option">ECON - Economics</div>
+            <div data-value="ECSP" role="option">ECSP - Early Childhood Special Educ</div>
+            <div data-value="EDCI" role="option">EDCI - Curriculum &amp; Instruction</div>
+            <div data-value="EDCO" role="option">EDCO - Counseling</div>
+            <div data-value="EDEC" role="option">EDEC - Early Childhood Pre K-3</div>
+            <div data-value="EDEL" role="option">EDEL - Elementary Education</div>
+            <div data-value="EDES" role="option">EDES - Envrnmntl &amp; Sustainability Edu</div>
+            <div data-value="EDFS" role="option">EDFS - Foundations</div>
+            <div data-value="EDHE" role="option">EDHE - Health Education</div>
+            <div data-value="EDHI" role="option">EDHI - Higher Education</div>
+            <div data-value="EDLI" role="option">EDLI - Library Science</div>
+            <div data-value="EDLP" role="option">EDLP - Leadership and Policy Studies</div>
+            <div data-value="EDLT" role="option">EDLT - Literacy</div>
+            <div data-value="EDML" role="option">EDML - Middle Level Teacher Education</div>
+            <div data-value="EDPE" role="option">EDPE - Physical Education-Prof</div>
+            <div data-value="EDRM" role="option">EDRM - Education Research Methods</div>
+            <div data-value="EDSC" role="option">EDSC - Secondary Education</div>
+            <div data-value="EDSP" role="option">EDSP - Special Education</div>
+            <div data-value="EDSS" role="option">EDSS - Education</div>
+            <div data-value="EDTE" role="option">EDTE - Teacher Education</div>
+            <div data-value="EE" role="option">EE - Electrical Engineering</div>
+            <div data-value="EMED" role="option">EMED - EMED</div>
+            <div data-value="EMGT" role="option">EMGT - Engineering Management</div>
+            <div data-value="ENGL" role="option">ENGL - English</div>
+            <div data-value="ENGR" role="option">ENGR - Engineering</div>
+            <div data-value="ENSC" role="option">ENSC - Environmental Sciences</div>
+            <div data-value="ENVS" role="option">ENVS - Environmental Studies</div>
+            <div data-value="ESOL" role="option">ESOL - Engl for Spkrs of Other Langs</div>
+            <div data-value="EXSC" role="option">EXSC - Exercise Science</div>
+            <div data-value="FOR" role="option">FOR - Forestry</div>
+            <div data-value="FREN" role="option">FREN - French</div>
+            <div data-value="FS" role="option">FS - Food Systems</div>
+            <div data-value="FTS" role="option">FTS - Film &amp; Television Studies</div>
+            <div data-value="GEOG" role="option">GEOG - Geography</div>
+            <div data-value="GEOL" role="option">GEOL - Geology</div>
+            <div data-value="GERM" role="option">GERM - German</div>
+            <div data-value="GNRL" role="option">GNRL - GNRL</div>
+            <div data-value="GRAD" role="option">GRAD - Graduate</div>
+            <div data-value="GRK" role="option">GRK - Greek</div>
+            <div data-value="GRMD" role="option">GRMD - Graduate Medical</div>
+            <div data-value="GRNS" role="option">GRNS - Graduate Nursing</div>
+            <div data-value="GRS" role="option">GRS - Global and Regional Studies</div>
+            <div data-value="GSWS" role="option">GSWS - Gndr, Sexuality, &amp; Wms Stdies</div>
+            <div data-value="GU" role="option">GU - General University</div>
+            <div data-value="HCOL" role="option">HCOL - Honors College</div>
+            <div data-value="HDF" role="option">HDF - Human Development &amp; Fam Sci</div>
+            <div data-value="HDFS" role="option">HDFS - Human Development &amp; Fam Stdies</div>
+            <div data-value="HEBR" role="option">HEBR - Hebrew</div>
+            <div data-value="HFRS" role="option">HFRS - Human Functioning and Rehabilitation Science</div>
+            <div data-value="HLTH" role="option">HLTH - Health</div>
+            <div data-value="HP" role="option">HP - Historic Preservation</div>
+            <div data-value="HS" role="option">HS - Holocaust Studies</div>
+            <div data-value="HSCI" role="option">HSCI - Health Sciences</div>
+            <div data-value="HSOC" role="option">HSOC - Health and Society</div>
+            <div data-value="HST" role="option">HST - History</div>
+            <div data-value="HUMN" role="option">HUMN - Humanities</div>
+            <div data-value="IHS" role="option">IHS - Interprofessional Health Sci</div>
+            <div data-value="ITAL" role="option">ITAL - Italian</div>
+            <div data-value="JAPN" role="option">JAPN - Japanese</div>
+            <div data-value="JS" role="option">JS - Jewish Studies</div>
+            <div data-value="LAT" role="option">LAT - Latin</div>
+            <div data-value="LC" role="option">LC - Learning Community</div>
+            <div data-value="LING" role="option">LING - Linguistics</div>
+            <div data-value="MATH" role="option">MATH - Mathematics</div>
+            <div data-value="MATS" role="option">MATS - Materials Science</div>
+            <div data-value="MBA" role="option">MBA - Master of Business Admin</div>
+            <div data-value="ME" role="option">ME - Mechanical Engineering</div>
+            <div data-value="MED" role="option">MED - Medicine</div>
+            <div data-value="MLS" role="option">MLS - Medical Laboratory Science</div>
+            <div data-value="MMG" role="option">MMG - Microbiology &amp; Molecular Genetics</div>
+            <div data-value="MPBP" role="option">MPBP - Molecular Physiology &amp; Biophysics</div>
+            <div data-value="MS" role="option">MS - Military Studies</div>
+            <div data-value="MU" role="option">MU - Music</div>
+            <div data-value="MUE" role="option">MUE - Music Ensemble</div>
+            <div data-value="MUL" role="option">MUL - Music Lessons</div>
+            <div data-value="NFS" role="option">NFS - Nutrition and Food Sciences</div>
+            <div data-value="NH" role="option">NH - Nursing &amp; Health Sciences</div>
+            <div data-value="NR" role="option">NR - Natural Resources</div>
+            <div data-value="NSCI" role="option">NSCI - Neuroscience</div>
+            <div data-value="NURS" role="option">NURS - Nursing</div>
+            <div data-value="OBGY" role="option">OBGY - Obstetrics &amp; Gynecology</div>
+            <div data-value="ORNT" role="option">ORNT - Orientation</div>
+            <div data-value="ORTH" role="option">ORTH - Orthopedic Surgery</div>
+            <div data-value="OSSP" role="option">OSSP - Overseas Study Program</div>
+            <div data-value="OT" role="option">OT - Occupational Therapy</div>
+            <div data-value="PA" role="option">PA - Public Administration</div>
+            <div data-value="PATH" role="option">PATH - Pathology</div>
+            <div data-value="PBIO" role="option">PBIO - Plant Biology</div>
+            <div data-value="PEAC" role="option">PEAC - Physical Education Activities</div>
+            <div data-value="PH" role="option">PH - Public Health</div>
+            <div data-value="PHIL" role="option">PHIL - Philosophy</div>
+            <div data-value="PHRM" role="option">PHRM - Pharmacology</div>
+            <div data-value="PHYS" role="option">PHYS - Physics</div>
+            <div data-value="POLS" role="option">POLS - Political Science</div>
+            <div data-value="PRNU" role="option">PRNU - Professional Nursing</div>
+            <div data-value="PRT" role="option">PRT - Parks, Recreation and Tourism</div>
+            <div data-value="PSS" role="option">PSS - Plant &amp; Soil Science</div>
+            <div data-value="PSYS" role="option">PSYS - Psychological Science</div>
+            <div data-value="RAD" role="option">RAD - Radiology</div>
+            <div data-value="RADT" role="option">RADT - Radiation Therapy</div>
+            <div data-value="REL" role="option">REL - Religion</div>
+            <div data-value="RMS" role="option">RMS - Rehabilitation &amp; Movement Sci</div>
+            <div data-value="RUSS" role="option">RUSS - Russian</div>
+            <div data-value="SEP" role="option">SEP - Sustainability, Ecology and Policy</div>
+            <div data-value="SINT" role="option">SINT - Internship</div>
+            <div data-value="SOA" role="option">SOA - School of the Arts</div>
+            <div data-value="SOC" role="option">SOC - Sociology</div>
+            <div data-value="SPAN" role="option">SPAN - Spanish</div>
+            <div data-value="SPCH" role="option">SPCH - Speech</div>
+            <div data-value="STAT" role="option">STAT - Statistics</div>
+            <div data-value="SURG" role="option">SURG - Surgery</div>
+            <div data-value="SWSS" role="option">SWSS - Social Work</div>
+            <div data-value="THE" role="option">THE - Theatre</div>
+            <div data-value="VS" role="option">VS - Vermont Studies</div>
+            <div data-value="WFB" role="option">WFB - Wildlife &amp; Fisheries Biology</div>
+            <div data-value="WLIT" role="option">WLIT - World Literature</div>
+        </div>
+        <div class="seligo-aria-message sr-only" aria-live="polite"></div>
+    </div>
+    <div id="sam-login" class="sam-login screen noscript inactivescreen" role="dialog">
+        <div class="sam-login-header">
+            SAM Login
+        </div>
+
+        <div class="sam-login-body">
+            <div class="login-section message">
+                <p>Area for a message of some kind</p>
+            </div>
+
+            <div class="login-section debug" id="debug-area">
+                <p>Some Text</p>
+            </div>
+        </div>
+        <div class="buttons clearfix">
+            <div class="cancel">
+                <button class="btn-cancel inline-btn btn">Cancel</button>
+                <button class="inline-btn btn-login btn">Login</button>
+            </div>
+        </div>
+    </div><g0-widget-host id="g0-widget"></g0-widget-host><g0-textarea-recorder-host
+        id="g0-textarea-recorder"></g0-textarea-recorder-host><g0-ratings-popup-host
+        id="g0-ratings-popup"></g0-ratings-popup-host>
+    <div id="1p-menu-live-region" role="status" aria-live="polite" aria-atomic="true" aria-relevant="all"
+        style="clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; overflow: hidden; position: fixed; top: 0px; left: 0px; white-space: nowrap; width: 1px; overflow-wrap: normal;">
+        1Password menu is available. Press down arrow to select.</div>
+</body>
+
+</html>
